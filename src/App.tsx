@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 import { TextInput } from './components/TextInput/TextInput'
+import { StatsDisplay } from './components/StatsDisplay/StatsDisplay'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,8 +15,9 @@ function App() {
          </div>
         <TextInput onTextChange={function (text: string): void {
           throw new Error('Function not implemented.')
-        } } 
+        } }
         />
+         <StatsDisplay />
       </section>
     </>
   )
