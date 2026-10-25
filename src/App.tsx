@@ -1,5 +1,7 @@
 import { useState } from 'react'
+
 import './App.css'
+import { TextInput } from './components/TextInput/TextInput'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -8,14 +10,12 @@ function App() {
     <>
       <section id="center">
        <div>
-        </div>
-        <button
-          type="button"
-          className="counter"   
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+        <h1>Character-Counter</h1>
+         </div>
+        <TextInput onTextChange={function (text: string): void {
+          throw new Error('Function not implemented.')
+        } } 
+        />
       </section>
     </>
   )
