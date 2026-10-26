@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 import { TextInput } from './components/TextInput/TextInput'
-import { StatsDisplay } from './components/StatsDisplay/StatsDisplay'
+// import { StatsDisplay } from './components/StatsDisplay/StatsDisplay'
 import { CharacterCounter } from './components/CharacterCounter/CharacterCounter'
 
 function App() {
@@ -18,7 +18,6 @@ function App() {
           throw new Error('Function not implemented.')
         } }
         />
-         <StatsDisplay />
          <CharacterCounter />
       </section>
     </>
