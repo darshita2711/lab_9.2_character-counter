@@ -1,6 +1,7 @@
 import type { StatsDisplayProps } from "../../types";
 
 // Receive stats from the parent component through props
+// This function receives props because it needs the statistics from its parent.
 export function StatsDisplay({ stats }: StatsDisplayProps) {
   return (
      <div>
