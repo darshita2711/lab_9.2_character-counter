@@ -1,35 +1,35 @@
-# React + TypeScript + Vite
+# Character Counter
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple application built with React, TypeScript, and CSS.
 
-Currently, two official plugins are available:
+## Features
+- Count characters and words.
+- Calculate reading time.
+- Set minimum and maximum word limits.
+- Show messages based on word count.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies
+- React
+- TypeScript
+- CSS
+- Vite
 
-## React Compiler
+## How to Run
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+1. Install dependencies:
 
-Note: This will impact Vite dev & build performances.
-You can also try [the experimental native React Compiler support in plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md#rust-react-compiler) by using `compiler: true` in the plugin options instead of using the Babel plugin.
+   ```bash
+   npm install
+   ```
 
-## Expanding the Oxlint configuration
+2. Start the application:
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+   ```bash
+   npm run dev
+   ```
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+3. Open the local URL shown in the terminal.
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## What I Learned
+
+I learned how to use React components, props, the `useState` Hook, TypeScript interfaces, and CSS to build an interactive application.
