@@ -7,11 +7,23 @@ import { TextInput } from '../TextInput/TextInput';
 export function CharacterCounter() {
 // Store the text entered by the user
   const [text, setText] = useState('');
-   // Store the statistics in an object
-    const stats: TextStats = {
-        characterCount: text.length,
-        wordCount: 0,
-        readingTime: 0,
+
+  const minWords = 2;
+  const maxWords = 200;
+
+  // Calculate the word count
+  const wordCount = text.trim() === '' ? 0 : text.trim().split(' ').length;
+  // Calculate reading time
+  let readingTime = 0;
+
+  if (wordCount > 0) {
+    console.log("kkkkk")
+    readingTime = Math.ceil(wordCount / 200);
+  }
+  const stats: TextStats = {
+    characterCount: text.length,
+    wordCount: wordCount,
+    readingTime: readingTime,
   };
   return (
     <div>
@@ -20,6 +32,18 @@ export function CharacterCounter() {
       <TextInput onTextChange={setText} />
        {/* Pass the stats object to StatsDisplay using props */}
       <StatsDisplay stats={stats} />
+      {/* Display the word goal */}
+      <p>Minimum words: {minWords}</p>
+      <p>Maximum words: {maxWords}</p>
+
+      {/* Check whether the word count meets the goal */}
+      {wordCount < minWords ? (
+        <p>Please write at least {minWords} words.</p>
+      ) : wordCount > maxWords ? (
+        <p>You have exceeded the maximum of {maxWords} words.</p>
+      ) : (
+        <p>Your text is within the word limit!</p>
+      )}
     </div>
   );
 }
