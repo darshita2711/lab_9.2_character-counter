@@ -17,7 +17,6 @@ export function CharacterCounter() {
   let readingTime = 0;
 
   if (wordCount > 0) {
-    console.log("kkkkk")
     readingTime = Math.ceil(wordCount / 200);
   }
   const stats: TextStats = {
@@ -32,9 +31,6 @@ export function CharacterCounter() {
       <TextInput onTextChange={setText} />
        {/* Pass the stats object to StatsDisplay using props */}
       <StatsDisplay stats={stats} />
-      {/* Display the word goal */}
-      <p>Minimum words: {minWords}</p>
-      <p>Maximum words: {maxWords}</p>
 
       {/* Check whether the word count meets the goal */}
       {wordCount < minWords ? (
