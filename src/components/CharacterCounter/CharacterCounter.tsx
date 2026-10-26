@@ -17,7 +17,7 @@ export function CharacterCounter() {
   let readingTime = 0;
 
   if (wordCount > 0) {
-    readingTime = Math.ceil(wordCount / 200);
+    readingTime = Number((wordCount / 200).toFixed(2));
   }
   const stats: TextStats = {
     characterCount: text.length,

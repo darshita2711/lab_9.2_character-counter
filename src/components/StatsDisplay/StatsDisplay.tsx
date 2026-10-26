@@ -21,7 +21,7 @@ export function StatsDisplay({ stats }: StatsDisplayProps) {
       {/* Reading time */}
       <div className="stat-card">
         <p>Reading Time</p>
-        <h2>{stats.readingTime}:00</h2>
+        <h2>{stats.readingTime}</h2>
       </div>
     </div>
   );
