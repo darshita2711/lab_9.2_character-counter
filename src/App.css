@@ -1,0 +1,79 @@
+/* Style the whole page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Style the main app container */
+#root {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Style the main heading */
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+/* Style the text input */
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Add a highlight when the user clicks the textarea */
+textarea:focus {
+  outline: 2px solid #646cff;
+  border-color: #646cff;
+}
+
+/* Style the statistics and messages */
+p {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Arrange statistics in a row */
+.stats-container {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Style each statistics card */
+.stat-card {
+  flex: 1;
+  min-width: 120px;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Style the labels */
+.stat-card p {
+  margin: 0 0 10px;
+  color: #666;
+}
+
+/* Style the numbers */
+.stat-card h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+.word-limit {
+  text-align: center;
+  color: #666;
+  margin-top: 15px;
+}
